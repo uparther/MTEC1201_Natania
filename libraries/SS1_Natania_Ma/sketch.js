@@ -1,6 +1,6 @@
 /* Name: Natania Ma
 Title: Sunny Day
-Concept: Mimicking a children's drawing */
+Concept: Mimicking my childhood artstyle. */
 
 function setup() {
   createCanvas(1000, 500);
