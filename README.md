@@ -1,3 +1,3 @@
 # MTEC1201_Natania
 My goals:
-In this class, I want to getting experiences with programming like C++ or Python, also be comfortable at GitHub.
+In this class, I want to getting experiences and well-developed with computer programming like C++ or Python, and also be comfortable and well-organized at GitHub.
