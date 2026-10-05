@@ -18,6 +18,8 @@ let y = 0;
 let stampX = 0;
 let stampY = 0;
 
+let bgX = 0;
+
 function setup() {
   createCanvas(1280, 720);
 }
@@ -28,6 +30,23 @@ function draw() {
   x = mouseX;
   y = mouseY;
 
+  bgX = bgX + 5;
+
+  // Blue Disk Text
+    fill("blue");
+    textSize(100);
+    textAlign(CENTER, CENTER);
+    textFont("Arial Black");
+    textStyle(BOLDITALIC);
+    text("DVD", bgX, height/2 - 55);
+
+    //Blue Disk
+    fill("blue"); 
+    ellipse(bgX, height/2 , 200, 50);
+  
+    fill("black");
+    ellipse(bgX, height/2, 60, 10);
+
   // Stamp Text
     fill("orange");
     textSize(100);
@@ -36,14 +55,13 @@ function draw() {
     textStyle(BOLDITALIC);
     text("DVD", stampX, stampY - 55);
 
-  
+    //OrangeDisk
     fill("orange"); 
     ellipse(stampX, stampY , 200, 50);
   
-    
     fill("black");
     ellipse(stampX, stampY, 60, 10);
-  
+   
 // Pink Disk
     fill("magenta"); 
     ellipse(x, y , 200, 50);
@@ -64,4 +82,8 @@ function draw() {
 function mousePressed() {
   stampX = mouseX;
   stampY = mouseY;
+}
+
+function keyPressed() {
+  bgX = 0;
 }
