@@ -25,14 +25,14 @@ x = x + speed;
 if (x>600 || x<0 ) {
   //speed = speed * -1; back and forth
 
-  // dont work speed = random (1, 5) * -1;
+  // dont work speed = random (1, 5)  -1;
   speed =   - 1 * random (0.5,5.5);
   if ( speed > 10 || x <0  ){
     speed = 1;
   }
 
 print("X" + x);
-print("speed" + speed);
+print("speed" + speed);*
 }
 
 if (keyIsPressed) {
