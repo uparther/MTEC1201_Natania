@@ -20,7 +20,7 @@ function setup() {
 function draw() {
   background(220);
 
-  ms = millis () // the number of ,illisseconds since starting the sketchs
+  ms = millis () // the number of ,illis seconds since starting the sketchs
   seconds = ms / 1000; 
 
   image(img, x, y, 200,200);
