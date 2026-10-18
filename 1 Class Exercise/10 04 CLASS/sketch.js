@@ -32,7 +32,7 @@ if (x>600 || x<0 ) {
   }
 
 print("X" + x);
-print("speed" + speed);*
+print("speed" + speed);
 }
 
 if (keyIsPressed) {
