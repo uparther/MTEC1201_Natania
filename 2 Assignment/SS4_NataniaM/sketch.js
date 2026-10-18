@@ -46,10 +46,10 @@ function draw() {
   // after click me 
   if (show === true){ 
 // THE WHOLE TRAIN ITSELF -- START
-    fill(41, 85, 186);// BOX SHADE LIGHT BLUE
-    rect(225-40, 70, 480, 320); 
-    fill(4, 35, 107);// BOX BLUE
-    rect(225-40, 130, 480, 320); 
+    fill(41, 85, 186); // BOX SHADE COLOR LIGHT BLUE
+    rect(225 - 40, 70, 480, 320); 
+    fill(4, 35, 107); // BOX COLOR BLUE
+    rect(225 - 40, 130, 480, 320); 
 
     fill(158, 8, 8) // red coat FOR THE FACE
     ellipse( width/2, height/2 - 50, 420, 420) ;
@@ -61,57 +61,56 @@ function draw() {
 
     strokeWeight(0) ; // TURN BACK TO 0
     fill(79, 79, 79); // GREY
-    ellipse(425-5, 43 , 130, 75); // ADD PIPE CAP shade
+    ellipse(425 - 5, 43 , 130, 75); // ADD PIPE CAP shade
     
     fill('BLACK');
-    ellipse(425-5, 50 , 130, 80); // PIPE CAP
+    ellipse(425 - 5, 50 , 130, 80); // PIPE CAP
     rect(425 - 70, 50, 130, 200);  // PIPE
     
     fill(43, 43, 43); //PIPE BAR (boolean)
     rect(425 - 70, 50, 130, 5); 
 
     stroke('grey'); // TIMER FACE
-    strokeWeight(20) ;
-    fill('black')  ;
+    strokeWeight(20);
+    fill('black');
     ellipse( width/2, height/2, 400, 400) ;
 
-    strokeWeight(0) ;// TURN BACK TO 0
+    strokeWeight(0) ; // TURN BACK TO 0
 
     fill(181, 80, 80); // shade of red bar
-    rect(225-20, 395+143, 440, 60); 
+    rect(225 - 20, 395 + 143, 440, 60); 
 
     fill(158, 8, 8); // red bar
-    rect(225-20, 395+150, 440, 60);
+    rect(225 - 20, 395 + 150, 440, 60);
 
     fill(79, 79, 79); // button shade
-    ellipse(425 - 110, 395+197 ,60, 60);
-    ellipse(425 + 110, 395+197 ,60, 60);
+    ellipse(425 - 110, 395 + 197 ,60 , 60);
+    ellipse(425 + 110, 395 + 197 ,60 , 60);
 
     fill('black'); // button
-    ellipse(425 - 110, 395+200 ,60, 60);
-    ellipse(425 + 110, 395+200 ,60, 60);
+    ellipse(425 - 110, 395 + 200 ,60 , 60);
+    ellipse(425 + 110, 395 + 200 ,60 , 60);
 
     fill("red"); // TEXT INSIDE THE TRAIN
-    textAlign(CENTER, CENTER);// both height and width
+    textAlign(CENTER, CENTER); // both height and width
     strokeWeight(0);
-    textSize(125);
     textFont('Verdana');
     textStyle(BOLD);
 // THE WHOLE TRAIN ITSELF -- END 
 
-    if (songPlayed === false){ //Strictly equivalent to ===
+    if (songPlayed === false){ // Strictly equivalent to ===
     song.play(); // delete
     songPlayed = true;
     }
 
     let ms = millis() - timeStart; // repeat continuously
 
-    if(ms > 5000){ // img appear after 5 sec 
+    if(ms > 5000){ // img appears after 5 sec 
       textSize(150);
-      text('🕪', width/2, height/2)
+      text('🕪', width/2, height/2);
 
-      imageMode(CENTER)
-      image(img, x, height / 2 , 300, 300)
+      imageMode(CENTER);
+      image(img, x, height / 2 , 300, 300);
 
       //Bounceing the img
       x = x + speed;
@@ -124,14 +123,14 @@ function draw() {
       text('HERE COMES!', width/2, height/2 - 60);
       text('THE!', width/2, height/2 - 10);
       text('CHOO-CHOO!', width/2, height/2  + 40);
-      text('TRAIN!', width/2, height/2  + 90);
+      text('TRAIN!', width/2, height/2 + 90);
     }
     else if (ms > 3500) { 
     textSize(40);
     text('HERE COMES!', width/2, height/2 - 60);
     text('HERE COMES!', width/2, height/2 - 60);
     text('THE!', width/2, height/2 - 10);
-    text('CHOO-CHOO!', width/2, height/2  + 40);
+    text('CHOO-CHOO!', width/2, height/2 + 40);
   }   
     else if (ms > 3000) { 
     textSize(40);
@@ -150,7 +149,30 @@ function draw() {
 
   }
     else {
-    text('click me', width/2, height/2); // NEED TO CLICK THE WEB FOR THE SOUND 
+    // Detail
+    fill(2, 62, 225)
+    textSize(90);
+    text('✦ ݁˖', 130, 100);
+    
+    textSize(60);
+    text('✦ ݁˖', 750, 320);
+    text('∘₊*                       *₊∘', width/2, 495 );
+
+    textSize(100); 
+    text('°‧ 𓆝 𓆟 𓆞 ·｡', width/2, 220); 
+    text('. ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁.', width/2, 620); 
+    text('∘₊✧─ ─✧₊∘', width/2, 640 + 85);
+    
+    // TEXT
+    textSize(80);
+    fill(90, 1, 1)
+    text('Click Anywhere', width/2, height/2 + 5); // NEED TO CLICK FOR THE SOUND 
+    text('To Start', width/2, height/2 + 105);
+
+    fill(188, 0, 0)
+    text('Click Anywhere', width/2, height/2); // NEED TO CLICK FOR THE SOUND 
+    text('To Start', width/2, height/2 + 100);
+
   }
   
 }
