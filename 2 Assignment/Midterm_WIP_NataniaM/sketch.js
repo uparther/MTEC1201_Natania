@@ -1,6 +1,6 @@
 /*
 Name : Natania Ma
-Title: Bullet Sun's Paradise
+Title: The Sun's Paradise
 
 Concept:
 This a midterm project interactive work,
@@ -10,7 +10,6 @@ It should be option 2: Expanded Short Study.
 
 Instructions:
 This is a very short game.
-This game has Bullet Hell elements. 
 A mouse is recommended.
 - (Click) / (ENTER) to Enter / Restart the game. 
 - (Click) to interact / continue all the dialogues.
@@ -30,10 +29,6 @@ Moving left or right will create the WAXING or WANING CRESCENT.
 This game have Metagaming elements:
 If you died on your first try, you will encounter a different dialogue.
 Both dialogues will lead to the same ending.
-
-A tiny design:
-If you restart the game, you mouse position should (maybe not) interact with the Moon,
-instead of the Sun.
 */
 
 // setup
@@ -41,6 +36,7 @@ let boundaryX;
 let boundaryY;
 let state = 'preGame';
 let Geist_Pixel; // Font
+let Star;
 
 
 // game 
@@ -93,7 +89,8 @@ function preGame(){
     fill('lightyellow');
     ellipse(width/2, mouseY - 625, 100, 100)
 
-    ellipse(random(width), random(height), 15, 15);
+    let Star = random(5, 20);
+    ellipse(random(width), random(height), Star, Star);
     let moonEatX = width - mouseX;
     fill(8, 47, 66); //eat  // color background
     if (mouseX < 425){
@@ -108,10 +105,10 @@ function preGame(){
   
   textSize(100);
   // rect (0, 200 - 150/2, 851 , 150) // black line behind the sun
-  text("Bullet Sun's ", width/2, height/2); // Midterm Game
+  text("The Sun's ", width/2, height/2); // Midterm Game
   text('Paradise', width/2, height/2 + 100); // Demo 1
   textSize(50);
-  text('"Click" To Start', width/2, height/2 + 220);
+  text('"Click To Start"', width/2, height/2 + 260);
 }
 
 function stageOne(){
@@ -167,7 +164,7 @@ function stageOne(){
     else if (SunY >= 150 && Sunstop === true && SunY < 960){ // SUN DROP
       SunY = SunY + 15;
       // doc test
-      let d = dist(width / 2, SunY, boundaryX, boundaryY);
+      let d = dist(width / 2, SunY, boundaryX, boundaryY); //SunX, SunY,  PlayerX, PlayerY
       
       // sun 160 + player 25 = 185
       if (d <= 180) {
@@ -204,7 +201,7 @@ function ending(){
   background(1, 9, 28); //background(8, 47, 66);
   textSize(125);
   fill('white')
-  ellipse(random(width), random(height), 15, 15);
+  ellipse(random(width), random(height), Star, Star);
 
   text('You win', width/2, height/2 + 100);
   textSize(50);
