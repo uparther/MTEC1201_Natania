@@ -18,7 +18,7 @@ let cell = 75
 let playerColor = 'red'
 
 function setup() {
-  createCanvas(600, windowHeight);
+  createCanvas(600, 825);
   textAlign(CENTER,CENTER)
   textFont('Georgia')
   game();
@@ -37,7 +37,7 @@ function game(){
   // BOARD
   for (let r = 0; r < rows; r = r + 1) { 
     for (let c = 0; c < columns; c = c + 1) {
-      fill(255);
+      fill('white');
       stroke(0);
       ellipse(c * cell + 67.5, r * cell + 200, 60, 60);
     }
